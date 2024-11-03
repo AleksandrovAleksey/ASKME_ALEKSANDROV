@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c27bf89-fb18-49f5-9548-7daaeb6189a9" name="Changes" comment="init django, add bootstrap">
+      <change afterPath="$PROJECT_DIR$/members/templates/ask.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/bender.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/question.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/sign up.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/members/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/members/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/members/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728689883499</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="init django, add bootstrap">
+      <option name="closed" value="true" />
+      <created>1729206345244</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729206345244</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
