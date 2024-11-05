@@ -4,15 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c27bf89-fb18-49f5-9548-7daaeb6189a9" name="Changes" comment="init django, add bootstrap">
-      <change afterPath="$PROJECT_DIR$/members/templates/ask.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/members/templates/bender.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/members/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/members/templates/question.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/members/templates/settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/members/templates/sign up.html" afterDir="false" />
+    <list default="true" id="5c27bf89-fb18-49f5-9548-7daaeb6189a9" name="Changes" comment="add 7 pages">
+      <change afterPath="$PROJECT_DIR$/members/templates/bender_auth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/black_jack.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/black_jack_auth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/hot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/hot_auth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/index_auth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/answers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/base_auth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/pagination.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/question.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/question_auth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/one_question.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/one_question_auth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/user_settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AskPupkin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AskPupkin/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AskPupkin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AskPupkin/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/ask.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/ask.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/bender.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/bender.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/user_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/question.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/settings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/sign up.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/sign_up.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/members/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/members/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/members/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/members/views.py" afterDir="false" />
     </list>
@@ -53,14 +72,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.manage.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/luv.toxic/PycharmProjects/ASKME_ALEKSANDROV/members/templates/layouts",
+    "settings.editor.selected.configurable": "preferences.editor.code.editing"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\luv.toxic\PycharmProjects\ASKME_ALEKSANDROV\members\templates\layouts" />
+      <recent name="C:\Users\luv.toxic\PycharmProjects\ASKME_ALEKSANDROV\members\templates" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ASKME_ALEKSANDROV" />
@@ -130,11 +157,20 @@
       <option name="project" value="LOCAL" />
       <updated>1729206345244</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add 7 pages">
+      <option name="closed" value="true" />
+      <created>1730652577666</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730652577666</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init django, add bootstrap" />
-    <option name="LAST_COMMIT_MESSAGE" value="init django, add bootstrap" />
+    <MESSAGE value="add 7 pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 7 pages" />
   </component>
 </project>

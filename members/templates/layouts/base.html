@@ -1,0 +1,69 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>base</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-3 border-bottom border-black">
+    <div class="container-fluid">
+        <div class="d-flex w-100 justify-content-between align-center">
+            <a class="navbar-brand" href="{% url 'index' %}">AskPupkin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Ask</button>
+            </form>
+            <div class="d-flex gap-2">
+                <a href="{% url 'user_login' %}">log in</a>
+                <a href="{% url 'sign_up' %}">register</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="container mt-3">
+    <div class="row">
+        {% block content %}
+        {% endblock %}
+        <div class="col-3">
+            <section>
+                <h2>Popular Tags</h2>
+                <span class="badge rounded-pill"><a class="text-danger text-decoration-none fs-5"
+                                                    href="#">perl</a></span>
+                <span class="badge rounded-pill"><a class="text-decoration-none fs-5" href="#">python</a></span>
+                <span class="badge rounded-pill"><a class="text-decoration-none fs-5" href="#">TechnoPark</a></span>
+                <span class="badge rounded-pill"><a class="text-danger text-decoration-none fs-3"
+                                                    href="#">MySQL</a></span>
+                <span class="badge rounded-pill"><a class="text-warning-emphasis text-decoration-none fs-5" href="#">django</a></span>
+                <span class="badge rounded-pill"><a class="text-decoration-none fs-5" href="#">Mail.ru</a></span>
+                <span class="badge rounded-pill"><a class="text-decoration-none fs-5" href="#">Voloshin</a></span>
+                <span class="badge rounded-pill"><a class="text-success text-decoration-none fs-5" href="#">Firefox</a></span>
+            </section>
+
+            <section>
+                <h2>Best members</h2>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Dr. Freeman</li>
+                    <li class="list-group-item">Dr. House</li>
+                    <li class="list-group-item">Marco Lisa</li>
+                    <li class="list-group-item">Marco Chlisa</li>
+                    <li class="list-group-item">Batman</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</main>
+<script type="text/javascript" src="{% static " bootstrap.min.js
+" %}"></script>
+</body>
+</html>

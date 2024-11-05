@@ -1,115 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'layouts/base_auth.html' %}
 {% load static %}
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>base</title>
-    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
-</head>
-<body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary border-3 border-bottom border-black">
-    <div class="container-fluid">
-        <div class="d-flex w-100 justify-content-between align-center">
-            <a class="navbar-brand" href="#">AskPupkin</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Переключатель навигации">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
-                <button class="btn btn-outline-success" type="submit">Ask</button>
-            </form>
-            <div class="d-flex gap-2">
-                <a href="#">log in</a>
-                <a href="#">register</a>
-            </div>
-        </div>
-    </div>
-</nav>
+{% block content %}
 
-<main class="container mt-3">
-    <div class="d-flex p-2 align-items-center">
-        <h1>New Question</h1>
-    </div>
-
-    <div class="row">
-        <form class="col-9 d-flex flex-column gap-4 need-validation">
-            <div class="mb-2">
-                <label for="Title" class="form-label">Title</label>
-                <input type="Text" minlength="10" maxlength="100" class="form-control border-black" id="Title"
-                       placeholder="How to build a moon park?" required>
-                <div class="invalid-feedback"> Please compose a valid title.</div>
-                <span id="titleHelpInLine" class="form-text">
+<div class="d-flex p-2 align-items-center">
+    <h1>New Question</h1>
+</div>
+<form class="col-9 d-flex flex-column gap-4 need-validation">
+    <div class="mb-2">
+        <label for="Title" class="form-label">Title</label>
+        <input type="Text" minlength="10" maxlength="100" class="form-control border-black" id="Title"
+               placeholder="How to build a moon park?" required>
+        <div class="invalid-feedback"> Please compose a valid title.</div>
+        <span id="titleHelpInLine" class="form-text">
                         Must be 10-100 characters long.
                 </span>
-            </div>
+    </div>
 
-            <div class="mb-3">
-                <label for="Text" class="form-label">Text</label>
-                <textarea class="form-control border-black" maxlength="1000" id="Text" rows="5" required>Really, how? Have no idea about it</textarea>
-                <div class="invalid-feedback"> Please compose a valid description.</div>
-                <span id="textHelpInLine" class="form-text">
+    <div class="mb-3">
+        <label for="Text" class="form-label">Text</label>
+        <textarea class="form-control border-black" placeholder="Really, how? Have no idea about it" maxlength="1000" id="Text" rows="5" required></textarea>
+        <div class="invalid-feedback"> Please compose a valid description.</div>
+        <span id="textHelpInLine" class="form-text">
                         Describe your problem. Must be less than 1000 characters long.
                 </span>
-            </div>
-            <div class="mb-3">
-                <label for="Tags" class="form-label">Tags</label>
-                <input type="Text" maxlength="100" class="form-control border-black" id="Tags" placeholder="moon, park, puzzle" required>
-                <div class="invalid-feedback"> Please compose a valid tags.</div>
-                <span id="tagsHelpInLine" class="form-text">
+    </div>
+    <div class="mb-3">
+        <label for="Tags" class="form-label">Tags</label>
+        <input type="Text" maxlength="100" class="form-control border-black" id="Tags" placeholder="moon, park, puzzle"
+               required>
+        <div class="invalid-feedback"> Please compose a valid tags.</div>
+        <span id="tagsHelpInLine" class="form-text">
                         Add tags. Must be 3 tags.
                 </span>
-            </div>
-            <div class="d-grid col-1">
-                <button type="submit" class="btn btn-outline-success">Ask</button>
-            </div>
-        </form>
-
-        <div class="col-3 d-flex flex-column gap-4">
-            <section>
-                <h2>Popular Tags</h2>
-                <span class="badge rounded-pill"><a class="text-danger text-decoration-none fs-5"
-                                                    href="#">perl</a></span>
-                <span class="badge rounded-pill"><a class="text-decoration-none fs-5" href="#">python</a></span>
-                <span class="badge rounded-pill"><a class="text-decoration-none fs-5" href="#">TechnoPark</a></span>
-                <span class="badge rounded-pill"><a class="text-danger text-decoration-none fs-3"
-                                                    href="#">MySQL</a></span>
-                <span class="badge rounded-pill"><a class="text-warning-emphasis text-decoration-none fs-5"
-                                                    href="#">django</a></span>
-                <span class="badge rounded-pill"><a class="text-decoration-none fs-5" href="#">Mail.ru</a></span>
-                <span class="badge rounded-pill"><a class="text-decoration-none fs-5" href="#">Voloshin</a></span>
-                <span class="badge rounded-pill"><a class="text-success text-decoration-none fs-5"
-                                                    href="#">Firefox</a></span>
-            </section>
-
-            <section>
-                <h2>Best members</h2>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a href="#">Dr. Freeman</a></li>
-                    <li class="list-group-item"><a href="#">Dr. House</a></li>
-                    <li class="list-group-item"><a href="#">Marco Lisa</a></li>
-                    <li class="list-group-item"><a href="#">Marco Chlisa</a></li>
-                    <li class="list-group-item"><a href="#">Batman</a></li>
-                </ul>
-            </section>
-        </div>
     </div>
-</main>
-
-<script type="text/javascript" src="{% static " bootstrap.js
-" %}"></script>
-</body>
-</html>
-</body>
-</html>
+    <div class="d-grid col-1">
+        <button type="submit" class="btn btn-outline-success">Ask</button>
+    </div>
+</form>
+{% endblock %}

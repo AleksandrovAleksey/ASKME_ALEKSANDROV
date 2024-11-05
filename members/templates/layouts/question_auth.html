@@ -1,0 +1,40 @@
+{% load static %}
+
+<article class="d-flex flex-column gap-3">
+    <div class="card w-100" style="width: 18rem;">
+        <div class="card-body border border-black">
+            <div class="row">
+                <div class="col-2">
+                    <div class="border border-black mb-2" style="height:100px">
+                        <img src="{% static 'img/batman.jpg' %}" alt="Avatar" class="img-fluid">
+                    </div>
+                    <div class="d-flex border border-black justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <p>5</p>
+                        </div>
+                        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                            <button type="button" class="btn btn-success">Like</button>
+                            <button type="button" class="btn btn-danger">Dislike</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10 d-flex flex-column justify-content-between">
+                    <div>
+                        <h5 class="card-title">
+                            <a href="{% url 'one_question_auth' question.id %}" class="card-link">{{ question.title }}</a>
+                        </h5>
+                        <p class="card-text">{{ question.text }}</p>
+                    </div>
+                    <div class="d-flex gap-5 ">
+                        <a href="#" class="card-link">answer (3)</a>
+                        <div>
+                            Tags:
+                            <a href="{% url 'black_jack_auth' %}" class="card-link">black-jack</a>
+                            <a href="{% url 'bender_auth' %}" class="card-link">bender</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

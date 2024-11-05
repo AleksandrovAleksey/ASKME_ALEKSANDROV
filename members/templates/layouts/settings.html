@@ -1,0 +1,54 @@
+{% load static %}
+
+
+<div class="d-flex flex-column gap-1">
+    <label for="inputLogin" class="form-label">Login</label>
+    <div class="d-flex col-sm-7 gap-3">
+        <input type="text" maxlength="25" minlength="8" class="form-control border-black" id="inputLogin"
+               value="dr_pepper" required>
+        <div class="invalid-feedback"> Please choose a valid login.</div>
+    </div>
+    <span id="loginHelpInLine" class="form-text">
+                        Must be 6-25 characters long.
+                </span>
+</div>
+
+<div class="d-flex flex-column gap-1">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <div class="d-flex col-sm-7 gap-3">
+        <input type="email" maxlength="50" class="form-control border-black" style="max-width: 100%"
+               id="inputEmail4" value="dr.pepper@mail.ru" required>
+        <div class="invalid-feedback"> Please provide a valid email.</div>
+    </div>
+</div>
+
+<div class="d-flex flex-column gap-1">
+    <label for="inputNick" class="form-label">NickName</label>
+    <div class="d-flex col-sm-7 gap-3">
+        <input type="text" minlength="6" maxlength="20" class="form-control border-black" id="inputNick"
+               value="Dr.Pepper" required>
+        <div class="invalid-feedback"> Please choose a valid NickName.</div>
+    </div>
+    <span id="nickHelpInLine" class="form-text">
+                        Must be 6-20 characters long.
+                </span>
+</div>
+
+<div class="d-flex flex-column gap-1">
+    <div>
+        <label class="input-group-text" for="inputGroupFile01">Upload avatar</label>
+    </div>
+    <div class="d-flex col-sm-7 gap-3">
+        <input type="file" class="form-control border-black" id="inputGroupFile01" required>
+        <div class="invalid-feedback">Example invalid form file feedback</div>
+        <button type="submit" class="btn btn-primary" style="width:100px">Choose</button>
+    </div>
+    <div class="d-flex mt-3">
+        <img src="#.jpg" alt="Avatar" class="img-fluid" style="width:200px; height:200px">
+    </div>
+</div>
+
+<div class="d-flex pb-5">
+    <a href="{% url 'index_auth' %}" class="btn btn-primary" role="button" data-bs-toggle="button">Save</a>
+</div>
+

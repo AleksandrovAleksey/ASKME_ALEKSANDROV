@@ -13,25 +13,25 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary border-3 border-bottom border-black">
     <div class="container-fluid">
         <div class="d-flex w-100 justify-content-between align-center">
-            <a class="navbar-brand" href="#">AskPupkin</a>
+            <a class="navbar-brand" href="{% url 'index_auth' %}">AskPupkin</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Переключатель навигации">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
-                <button class="btn btn-outline-success" type="submit">Ask</button>
+                <input class="form-control me-2" type="Search" placeholder="Search" aria-label="Search">
+                <a href="{% url 'ask' %}" class="btn btn-outline-success" role="button" data-bs-toggle="button">Ask</a>
             </form>
             <div class="d-flex gap-3">
-                <img src="123444.jpg" alt="Avatar" class="thumbnail">
+                <img src="{% static 'img/#.jpg' %}" alt="Avatar" class="thumbnail">
                 <div>
                     <div>
                         Dr. Pepper
                     </div>
-                    <div class="d-flex gap-2">
-                        <a href="#">settings</a>
-                        <a href="#">log out</a>
+                    <div class="d-flex gap-2 align-items-bottom">
+                        <a href="{% url 'user_settings' %}">settings</a>
+                        <a href="{% url 'index' %}">log out</a>
                     </div>
                 </div>
             </div>
@@ -39,44 +39,10 @@
     </div>
 </nav>
 
-<main class="container m-3 container-fluid">
-    <div class="d-flex gap-3 align-items-center mb-3">
-        <h1>Log in</h1>
-    </div>
-
+<main class="container mt-3">
     <div class="row">
-        <form class="col-9 d-flex flex-column gap-4 was-validated" style="height: 100px">
-            <div class="d-flex flex-column gap-1">
-                <label for="inputLogin" class="form-label">Login</label>
-                <div class="col-sm-7">
-                    <input type="text" maxlength="25" minlength="8" class="form-control border-black" id="inputLogin"
-                           placeholder="Enter your login here" required>
-                     <div class="invalid-feedback"> Please choose a valid login.</div>
-                    <span id="loginHelpInLine" class="form-text">
-                        Must be 8-25 characters long.
-                    </span>
-                </div>
-            </div>
-
-            <div class="d-flex flex-column gap-1">
-                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                <div class="col-sm-7">
-                    <input type="password" maxlength="20" minlength="8" class="form-control border-black"
-                           id="inputPassword" required>
-                     <div class="invalid-feedback"> Please provide a valid password.</div>
-                    <span id="passwordHelpInLine" class="form-text">
-                        Must be 8-20 characters long.
-                    </span>
-                </div>
-            </div>
-
-            <div class="d-flex justify-content-between col-sm-4 align-items-center">
-                <button type="submit" class="btn btn-primary" style="width:100px">Log in</button>
-                <a href="#">create new account</a>
-            </div>
-
-        </form>
-
+        {% block content %}
+        {% endblock %}
         <div class="col-3">
             <section>
                 <h2>Popular Tags</h2>
@@ -95,17 +61,17 @@
             <section>
                 <h2>Best members</h2>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a href="#">Dr. Freeman</a></li>
-                    <li class="list-group-item"><a href="#">Dr. House</a></li>
-                    <li class="list-group-item"><a href="#">Marco Lisa</a></li>
-                    <li class="list-group-item"><a href="#">Marco Chlisa</a></li>
-                    <li class="list-group-item"><a href="#">Batman</a></li>
+                    <li class="list-group-item">Dr. Freeman</li>
+                    <li class="list-group-item">Dr. House</li>
+                    <li class="list-group-item">Marco Lisa</li>
+                    <li class="list-group-item">Marco Chlisa</li>
+                    <li class="list-group-item">Batman</li>
                 </ul>
             </section>
         </div>
     </div>
 </main>
-<script type="text/javascript" src="{% static " bootstrap.js
+<script type="text/javascript" src="{% static " bootstrap.min.js
 " %}"></script>
 </body>
 </html>

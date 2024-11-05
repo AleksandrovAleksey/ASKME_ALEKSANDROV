@@ -1,0 +1,11 @@
+{% extends 'layouts/base_auth.html' %}
+{% load static %}
+{% block content %}
+<div class="d-flex gap-3 align-items-center">
+    <h1>Settings: Dr.Pepper</h1>
+    <a href="{% url 'index' %}">Main page</a>
+</div>
+<form class="col-9 d-flex flex-column gap-4 was-validated" style="height: 100px">
+    {% include 'layouts/settings.html' %}
+</form>
+{% endblock %}

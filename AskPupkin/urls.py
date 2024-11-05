@@ -17,7 +17,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from members import views
+
 urlpatterns = [
-    path('', include('members.urls')),
+    path('', views.index, name='index'),
+    path('index_auth', views.index_auth, name='index_auth'),
+    path('hot/', views.hot, name='hot'),
+    path('hot_auth/', views.hot_auth, name='hot_auth'),
+    path('bender/', views.bender, name='bender'),
+    path('bender_auth/', views.bender_auth, name='bender_auth'),
+    path('black_jack/', views.black_jack, name='black_jack'),
+    path('black_jack_auth/', views.black_jack_auth, name='black_jack_auth'),
+    path('user_settings/', views.user_settings, name='user_settings'),
+    path('user_login/', views.user_login, name='user_login'),
+    path('sign_up/', views.sign_up, name='sign_up'),
+    path('ask/', views.ask, name='ask'),
+    path('question/<int:question_id>', views.question, name='one_question'),
+    path('question_auth/<int:question_id>', views.question_auth, name='one_question_auth'),
     path('admin/', admin.site.urls),
 ]
