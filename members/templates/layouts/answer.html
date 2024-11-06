@@ -13,25 +13,23 @@
                             <h4>5</h4>
                         </div>
                         <div class="btn-group-vertical gap-1" role="group" aria-label="Vertical button group">
-                            <button type="button" class="btn btn-primary">Like</button>
-                            <button type="button" class="btn btn-danger">Dislike</button>
+                            <button type="button" class="btn btn-primary" aria-expanded="false">Like</button>
+                            <button type="button" class="btn btn-danger" aria-expanded="false">Dislike</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-10 d-flex flex-column justify-content-between">
                     <div>
                         <h5 class="card-title">
-                            <a href="{% url 'one_question' question.id %}" class="card-link">{{ question.title }}</a>
+                            {{ answer.title }}
                         </h5>
-                        <p class="card-text">{{ question.text }}</p>
+                        <p class="card-text">{{ answer.text }}</p>
                     </div>
-                    <div class="d-flex gap-5 ">
-                        <a href="{% url 'one_question_answers'  %}" class="card-link">answers (#)</a>
-                        <div>
-                            Tags:
-                            <a href="{% url 'black_jack' %}" class="card-link">black-jack</a>
-                            <a href="{% url 'bender' %}" class="card-link">bender</a>
-                        </div>
+                    <div class="form-check">
+                        <input class="form-check-input border-black" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Correct!
+                        </label>
                     </div>
                 </div>
             </div>

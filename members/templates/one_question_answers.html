@@ -1,14 +1,15 @@
-{% extends 'layouts/base_auth.html' %}
+{% extends 'layouts/base.html' %}
 {% load static %}
 {% block content %}
 <div class="d-flex gap-3 align-items-center">
-    <h1>Tag: bender</h1>
+    <h1>One question page</h1>
+    <a href="{% url 'index' %}">Main page</a>
 </div>
 <div class="col-9 d-flex flex-column gap-4" style="height: 100px">
-    {% for question in questions %}
-        {% include 'layouts/question.html' %}
+    {% for answer in answers %}
+    {% include 'layouts/answer.html' %}
     {% endfor %}
-
     {% include 'layouts/pagination.html' %}
 </div>
+
 {% endblock %}

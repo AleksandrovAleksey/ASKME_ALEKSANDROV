@@ -10,21 +10,21 @@
     <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary border-3 border-bottom border-black">
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-2 border-bottom border-black">
     <div class="container-fluid">
         <div class="d-flex w-100 justify-content-between align-center">
-            <a class="navbar-brand" href="{% url 'index_auth' %}">AskPupkin</a>
+            <a class="navbar-brand" href="{% url 'index_auth' %}">AskBatman</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Переключатель навигации">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="Search" placeholder="Search" aria-label="Search">
-                <a href="{% url 'ask' %}" class="btn btn-outline-success" role="button" data-bs-toggle="button">Ask</a>
+            <form class="d-flex gap-5" role="search">
+                <input class="form-control me-2 border-primary rounded-pill" type="Search" placeholder="Search" aria-label="Search">
+                <a href="{% url 'ask' %}" class="d-flex align-items-center btn btn-outline-primary" role="button" data-bs-toggle="button">Ask</a>
             </form>
-            <div class="d-flex gap-3">
-                <img src="{% static 'img/#.jpg' %}" alt="Avatar" class="thumbnail">
+            <div class="d-flex gap-3 m-1">
+                <img src="{% static 'img/#.jpg' %}" alt="Avatar" class="img-fluid">
                 <div>
                     <div>
                         Dr. Pepper

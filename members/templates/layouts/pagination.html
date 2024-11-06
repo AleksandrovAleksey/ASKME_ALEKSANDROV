@@ -1,11 +1,18 @@
 <nav aria-label="Page navigation example">
-    <ul class="pagination">
+    <ul class="pagination align-items-center gap-2">
         {% if page_obj.has_previous %}
-        <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+        <div class="d-flex border border-primary border-2 rounded-start-3">
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            </li>
+        </div>
         {% endif %}
+        <div class="d-flex fst-italic justify-content-between border border-primary border-2 p-2 rounded-pill text-primary">
         <li class="page-item">{{ page_obj.number }}</li>
+        </div>
         {% if page_obj.has_next %}
+        <div class="d-flex border border-primary border-2 rounded-end-3">
         <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+        </div>
         {% endif %}
     </ul>
 </nav>

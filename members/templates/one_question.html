@@ -7,15 +7,15 @@
 </div>
 <div class="col-9 d-flex flex-column gap-4" style="height: 100px">
     {% include 'layouts/question.html' %}
-    {% include 'layouts/answers.html' %}
 
-    <div class="form-floating border border-black">
+    <div class="form-floating border border-primary rounded-1">
                 <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
                           style="height: 100px"></textarea>
         <label for="floatingTextarea2">Enter your answer here..</label>
     </div>
     <div class="d-flex pb-5">
-        <button type="submit" class="btn btn-success" style="width:150px">Answer</button>
+        <a href="{% url 'user_login' %}" class="btn btn-outline-primary" role="button" data-bs-toggle="button">Answer</a>
     </div>
 </div>
+
 {% endblock %}

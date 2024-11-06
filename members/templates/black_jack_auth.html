@@ -1,4 +1,4 @@
-{% extends 'layouts/base.html' %}
+{% extends 'layouts/base_auth.html' %}
 {% load static %}
 {% block content %}
 <div class="d-flex gap-3 align-items-center">
@@ -6,7 +6,7 @@
 </div>
 <div class="col-9 d-flex flex-column gap-4" style="height: 100px">
     {% for question in questions %}
-        {% include 'layouts/question_auth.html' %}
+        {% include 'layouts/question.html' %}
     {% endfor %}
 
     {% include 'layouts/pagination.html' %}

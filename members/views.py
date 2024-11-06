@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 QUESTIONS = [
     {
-        'title': f'Title {i}',
+        'title': f'Question {i}',
         'id': i,
         'text': f'This is text for question # {i}'
     } for i in range(30)
@@ -13,9 +13,9 @@ QUESTIONS = [
 
 ANSWERS = [
     {
-        'title': f'Title {j}',
+        'title': f'Answer {j}',
         'id': j,
-        'text': f'This is text for answer # {j}'
+        'text': f'This is text for answer # {j}',
     } for j in range(10)
 ]
 
@@ -30,9 +30,31 @@ def index(request):
     return render(
         request, 'index.html',
         context={'questions': page.object_list, 'page_obj': page}
-
     )
 
+def one_question_answers(request):
+    if request.GET.get('page'):
+        page_num = int(request.GET.get('page'))
+    else:
+        page_num = 1
+    paginator = Paginator(ANSWERS, 2)
+    page = paginator.page(page_num)
+    return render(
+        request, 'one_question_answers.html',
+        context={'answers': page.object_list, 'page_obj': page}
+    )
+
+def one_question_answers_auth(request):
+    if request.GET.get('page'):
+        page_num = int(request.GET.get('page'))
+    else:
+        page_num = 1
+    paginator = Paginator(ANSWERS, 2)
+    page = paginator.page(page_num)
+    return render(
+        request, 'one_question_answers_auth.html',
+        context={'answers': page.object_list, 'page_obj': page}
+    )
 
 def index_auth(request):
     if request.GET.get('page'):
@@ -61,6 +83,7 @@ def hot(request):
         context={'questions': page.object_list, 'page_obj': page}
     )
 
+
 def hot_auth(request):
     hot_questions = copy.deepcopy(QUESTIONS)
     hot_questions.reverse()
@@ -83,20 +106,20 @@ def question(request, question_id):
         context={'question': one_question}
     )
 
-def answer(request, answer_id):
-    one_answer = ANSWERS[answer_id]
-    return render(
-        request, 'one_question.html',
-        context={'answer': one_answer}
-    )
-
-
 def question_auth(request, question_id):
     one_question = QUESTIONS[question_id]
     return render(
         request, 'one_question_auth.html',
         context={'question': one_question}
     )
+
+# def answer(request, answer_id):
+#     one_answer = ANSWERS[answer_id]
+#     return render(
+#         request, 'one_question_answers.html',
+#         context={'answer': one_answer}
+#     )
+
 
 
 def bender(request):
@@ -110,6 +133,7 @@ def bender(request):
         request, 'bender.html',
         context={'questions': page.object_list, 'page_obj': page}
     )
+
 
 def bender_auth(request):
     if request.GET.get('page'):
@@ -137,6 +161,7 @@ def black_jack(request):
         request, 'black_jack.html',
         context={'questions': page.object_list, 'page_obj': page}
     )
+
 
 def black_jack_auth(request):
     hot_questions = copy.deepcopy(QUESTIONS)
@@ -169,6 +194,7 @@ def sign_up(request):
     return render(
         request, 'sign_up.html',
     )
+
 
 def ask(request):
     return render(

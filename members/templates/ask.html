@@ -8,7 +8,7 @@
 <form class="col-9 d-flex flex-column gap-4 need-validation">
     <div class="mb-2">
         <label for="Title" class="form-label">Title</label>
-        <input type="Text" minlength="10" maxlength="100" class="form-control border-black" id="Title"
+        <input type="Text" minlength="10" maxlength="100" class="form-control border-primary" id="Title"
                placeholder="How to build a moon park?" required>
         <div class="invalid-feedback"> Please compose a valid title.</div>
         <span id="titleHelpInLine" class="form-text">
@@ -18,7 +18,7 @@
 
     <div class="mb-3">
         <label for="Text" class="form-label">Text</label>
-        <textarea class="form-control border-black" placeholder="Really, how? Have no idea about it" maxlength="1000" id="Text" rows="5" required></textarea>
+        <textarea class="form-control border-primary" placeholder="Really, how? Have no idea about it" maxlength="1000" id="Text" rows="5" required></textarea>
         <div class="invalid-feedback"> Please compose a valid description.</div>
         <span id="textHelpInLine" class="form-text">
                         Describe your problem. Must be less than 1000 characters long.
@@ -26,7 +26,7 @@
     </div>
     <div class="mb-3">
         <label for="Tags" class="form-label">Tags</label>
-        <input type="Text" maxlength="100" class="form-control border-black" id="Tags" placeholder="moon, park, puzzle"
+        <input type="Text" maxlength="100" class="form-control border-primary" id="Tags" placeholder="moon, park, puzzle"
                required>
         <div class="invalid-feedback"> Please compose a valid tags.</div>
         <span id="tagsHelpInLine" class="form-text">
@@ -34,7 +34,7 @@
                 </span>
     </div>
     <div class="d-grid col-1">
-        <button type="submit" class="btn btn-outline-success">Ask</button>
+       <a href="{% url 'index_auth' %}" class="btn btn-outline-primary" role="button" data-bs-toggle="button">Ask</a>
     </div>
 </form>
 {% endblock %}
