@@ -4,31 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c27bf89-fb18-49f5-9548-7daaeb6189a9" name="Changes" comment="add samples&#10;add links between pages&#10;add different displays for authorized and unauthorized users&#10;add pagination">
-      <change afterPath="$PROJECT_DIR$/members/templates/one_question_answers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/members/templates/one_question_answers_auth.html" afterDir="false" />
+    <list default="true" id="5c27bf89-fb18-49f5-9548-7daaeb6189a9" name="Changes" comment="add answers&#10;fixed errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AskPupkin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AskPupkin/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/ask.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/ask.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/bender_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/bender_auth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/black_jack_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/black_jack_auth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/hot.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/hot.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/members/templates/hot_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/hot_auth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/layouts/answers.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/layouts/answer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/members/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/layouts/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/layouts/base_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/layouts/base_auth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/layouts/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/layouts/pagination.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/layouts/pagination.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/layouts/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/layouts/question.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/members/templates/layouts/question_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/layouts/question_auth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/layouts/settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/one_question.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/one_question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/one_question_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/one_question_auth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/sign_up.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/sign_up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/user_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/user_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/user_settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/user_settings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/members/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,16 +47,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.manage.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/luv.toxic/PycharmProjects/ASKME_ALEKSANDROV/members/templates/layouts",
-    "settings.editor.selected.configurable": "settings.sync"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/luv.toxic/PycharmProjects/ASKME_ALEKSANDROV/members/templates/layouts&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\luv.toxic\PycharmProjects\ASKME_ALEKSANDROV\members\templates\layouts" />
@@ -168,13 +148,30 @@
       <option name="project" value="LOCAL" />
       <updated>1730765164766</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add answers&#10;fixed errors">
+      <option name="closed" value="true" />
+      <created>1730919493030</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730919493030</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add answers&#10;fixed errors">
+      <option name="closed" value="true" />
+      <created>1730919512865</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730919512865</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init django, add bootstrap" />
     <MESSAGE value="add 7 pages" />
     <MESSAGE value="add samples&#10;add links between pages&#10;add different displays for authorized and unauthorized users&#10;add pagination" />
-    <option name="LAST_COMMIT_MESSAGE" value="add samples&#10;add links between pages&#10;add different displays for authorized and unauthorized users&#10;add pagination" />
+    <MESSAGE value="add answers&#10;fixed errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="add answers&#10;fixed errors" />
   </component>
 </project>
