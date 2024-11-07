@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c27bf89-fb18-49f5-9548-7daaeb6189a9" name="Changes" comment="add answers&#10;fixed errors">
+    <list default="true" id="5c27bf89-fb18-49f5-9548-7daaeb6189a9" name="Changes" comment="fixed errors again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/hot_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/hot_auth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/layouts/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/layouts/question_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/layouts/question_auth.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/bender_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/bender_auth.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/black_jack_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/black_jack_auth.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730919512865</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed errors again">
+      <option name="closed" value="true" />
+      <created>1730967764091</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730967764091</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -172,6 +179,7 @@
     <MESSAGE value="add 7 pages" />
     <MESSAGE value="add samples&#10;add links between pages&#10;add different displays for authorized and unauthorized users&#10;add pagination" />
     <MESSAGE value="add answers&#10;fixed errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="add answers&#10;fixed errors" />
+    <MESSAGE value="fixed errors again" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed errors again" />
   </component>
 </project>
