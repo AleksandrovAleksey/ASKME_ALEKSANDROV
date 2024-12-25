@@ -1,15 +1,10 @@
 {% extends "layouts/base.html" %}
 
+{% load static %}
+
 {% block content %}
 
-<div class="row">
-    <div class="col-4">
-        <h1>Top questions</h1>
-    </div>
-    <div class="col-8">
-        <h3><a href="{% url 'index' %}" class="top-questions">New questions</a></h3>
-    </div>
-</div>
+<h1>Tag: {{ tag_name }}</h1>
 
 {% for question in questions %}
     {% include 'layouts/question_template.html' %}

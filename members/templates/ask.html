@@ -1,40 +1,38 @@
-{% extends 'layouts/base_auth.html' %}
-{% load static %}
+{% extends "layouts/base.html" %}
+
 {% block content %}
 
-<div class="d-flex p-2 align-items-center">
-    <h1>New Question</h1>
-</div>
-<form class="col-9 d-flex flex-column gap-4 need-validation">
-    <div class="mb-2">
-        <label for="Title" class="form-label">Title</label>
-        <input type="Text" minlength="10" maxlength="100" class="form-control border-primary" id="Title"
-               placeholder="How to build a moon park?" required>
-        <div class="invalid-feedback"> Please compose a valid title.</div>
-        <span id="titleHelpInLine" class="form-text">
-                        Must be 10-100 characters long.
-                </span>
-    </div>
-
+<h1>New question</h1>
+<form class="new-question">
     <div class="mb-3">
-        <label for="Text" class="form-label">Text</label>
-        <textarea class="form-control border-primary" placeholder="Really, how? Have no idea about it" maxlength="1000" id="Text" rows="5" required></textarea>
-        <div class="invalid-feedback"> Please compose a valid description.</div>
-        <span id="textHelpInLine" class="form-text">
-                        Describe your problem. Must be less than 1000 characters long.
-                </span>
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1"
+            placeholder="How to create a question?" maxlength="80"
+            minlength="10">
+        <div id="TitleHelpBlock" class="form-text">
+            Enter a title that briefly describes your problem. The length of the
+            title should be from
+            10 to 80 characters.
+        </div>
     </div>
     <div class="mb-3">
-        <label for="Tags" class="form-label">Tags</label>
-        <input type="Text" maxlength="100" class="form-control border-primary" id="Tags" placeholder="moon, park, puzzle"
-               required>
-        <div class="invalid-feedback"> Please compose a valid tags.</div>
-        <span id="tagsHelpInLine" class="form-text">
-                        Add tags. Must be 3 tags.
-                </span>
+        <label for="exampleFormControlTextarea1" class="form-label">Text</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1"
+            rows="10" maxlength="2000"
+            minlength="10"></textarea>
+        <div id="TextHelpBlock" class="form-text">
+            Describe your problem in the most detail.
+        </div>
     </div>
-    <div class="d-grid col-1">
-       <a href="{% url 'index_auth' %}" class="btn btn-outline-primary" role="button" data-bs-toggle="button">Ask</a>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Tags</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1"
+             maxlength="80" minlength="3">
+        <div id="TagsHelpBlock" class="form-text">
+            There may be several tags, list them separated by a space.
+        </div>
     </div>
+    <button type="submit" class="btn btn-primary">Ask</button>
 </form>
+
 {% endblock %}

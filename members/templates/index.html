@@ -1,15 +1,24 @@
-{% extends 'layouts/base.html' %}
-{% load static %}
-{% block content %}
-<div class="d-flex gap-3 align-items-center">
-    <h1>New Questions</h1>
-    <a href="{% url 'hot' %}">Hot questions</a>
-</div>
-<div class="col-9 d-flex flex-column gap-4">
-    {% for question in questions %}
-        {% include 'layouts/question.html' %}
-    {% endfor %}
+{% extends "layouts/base.html" %}
 
-    {% include 'layouts/pagination.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="col-4">
+        <h1>New questions</h1>
+    </div>
+    <div class="col-8">
+        <h3><a href="{% url 'hot' %}" class="top-questions">Top questions</a></h3>
+    </div>
 </div>
+
+{% for question in questions %}
+    {% include 'layouts/question_template.html' %}
+{% endfor %}
+
+{% if questions|length %}
+    {% include 'layouts/paginator.html' %}
+{% else %}
+    {% include 'layouts/empty_list.html' %}
+{% endif %}
+
 {% endblock %}

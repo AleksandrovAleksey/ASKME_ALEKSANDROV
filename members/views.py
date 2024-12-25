@@ -1,203 +1,145 @@
-import copy
-
-from django.core.paginator import Paginator
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
+from django.core.paginator import Paginator
 
-QUESTIONS = [
-    {
-        'title': f'Question {i}',
-        'id': i,
-        'text': f'This is text for question # {i}'
-    } for i in range(30)
-]
-
-ANSWERS = [
-    {
-        'title': f'Answer {j}',
-        'id': j,
-        'text': f'This is text for answer # {j}',
-    } for j in range(10)
-]
+from members import models
+from members import utils
 
 
-def index(request):
-    if request.GET.get('page'):
-        page_num = int(request.GET.get('page'))
-    else:
-        page_num = 1
-    paginator = Paginator(QUESTIONS, 5)
-    page = paginator.page(page_num)
-    return render(
-        request, 'index.html',
-        context={'questions': page.object_list, 'page_obj': page}
-    )
+def index(request: HttpRequest):
+    page = utils.paginate(models.Question.objects.get_new_questions(), request)
+    context = {
+        'questions': page['object_list'],
+        'page': page,
+        'is_auth': False,
+        'if_empty': {
+            'title': 'So far, there are no questions.',
+            'description': 'But you can ask your question!'
+        },
+        'top_users': models.Profile.objects.get_top_users(),
+        'top_tags': models.Tag.objects.get_top_tags(count=7)
+    }
 
-def one_question_answers(request):
-    if request.GET.get('page'):
-        page_num = int(request.GET.get('page'))
-    else:
-        page_num = 1
-    paginator = Paginator(ANSWERS, 2)
-    page = paginator.page(page_num)
-    return render(
-        request, 'one_question_answers.html',
-        context={'answers': page.object_list, 'page_obj': page}
-    )
-
-def one_question_answers_auth(request):
-    if request.GET.get('page'):
-        page_num = int(request.GET.get('page'))
-    else:
-        page_num = 1
-    paginator = Paginator(ANSWERS, 2)
-    page = paginator.page(page_num)
-    return render(
-        request, 'one_question_answers_auth.html',
-        context={'answers': page.object_list, 'page_obj': page}
-    )
-
-def index_auth(request):
-    if request.GET.get('page'):
-        page_num = int(request.GET.get('page'))
-    else:
-        page_num = 1
-    paginator = Paginator(QUESTIONS, 5)
-    page = paginator.page(page_num)
-    return render(
-        request, 'index_auth.html',
-        context={'questions': page.object_list, 'page_obj': page}
-    )
+    return render(request, 'index.html', context)
 
 
-def hot(request):
-    hot_questions = copy.deepcopy(QUESTIONS)
-    hot_questions.reverse()
-    if request.GET.get('page'):
-        page_num = int(request.GET.get('page'))
-    else:
-        page_num = 1
-    paginator = Paginator(hot_questions, 5)
-    page = paginator.page(page_num)
-    return render(
-        request, 'hot.html',
-        context={'questions': page.object_list, 'page_obj': page}
-    )
+def hot(request: HttpRequest):
+    page = utils.paginate(models.Question.objects.get_top_questions(), request)
+    context = {
+        'questions': page['object_list'],
+        'page': page,
+        'is_auth': False,
+        'if_empty': {
+            'title': 'So far there are no questions.',
+            'description': 'But you can ask your question!'
+        },
+        'top_users': models.Profile.objects.get_top_users(),
+        'top_tags': models.Tag.objects.get_top_tags(count=7)
+    }
+
+    return render(request, 'hot.html', context)
 
 
-def hot_auth(request):
-    hot_questions = copy.deepcopy(QUESTIONS)
-    hot_questions.reverse()
-    if request.GET.get('page'):
-        page_num = int(request.GET.get('page'))
-    else:
-        page_num = 1
-    paginator = Paginator(hot_questions, 5)
-    page = paginator.page(page_num)
-    return render(
-        request, 'hot_auth.html',
-        context={'questions': page.object_list, 'page_obj': page}
-    )
+def question(request: HttpRequest, question_id: int):
+    context = {
+        'is_auth': True,
+        'top_users': models.Profile.objects.get_top_users(),
+        'top_tags': models.Tag.objects.get_top_tags(count=7)
+    }
+    question_item = models.Question.objects.get_question(question_id)
+
+    if not question_item:
+        return render(request, 'not_found.html', context, status=404)
+
+    page = utils.paginate(models.Answer.objects.get_answers_for_question(question_id), request)
+    context.update({
+        "question": question_item,
+        "answers": page['object_list'],
+        'page': page,
+        'if_empty': {
+            'title': 'So far, there are no answers.',
+            'description': 'But you can answer this question first!'
+        },
+    })
+
+    return render(request, 'question.html', context)
 
 
-def question(request, question_id):
-    one_question = QUESTIONS[question_id]
-    return render(
-        request, 'one_question.html',
-        context={'question': one_question}
-    )
-
-def question_auth(request, question_id):
-    one_question = QUESTIONS[question_id]
-    return render(
-        request, 'one_question_auth.html',
-        context={'question': one_question}
-    )
-
-# def answer(request, answer_id):
-#     one_answer = ANSWERS[answer_id]
-#     return render(
-#         request, 'one_question_answers.html',
-#         context={'answer': one_answer}
-#     )
+def login(request: HttpRequest):
+    context = {
+        'is_auth': False,
+        'top_users': models.Profile.objects.get_top_users(),
+        'top_tags': models.Tag.objects.get_top_tags(count=7)
+    }
+    return render(request, 'login.html', context)
 
 
-
-def bender(request):
-    if request.GET.get('page'):
-        page_num = int(request.GET.get('page'))
-    else:
-        page_num = 1
-    paginator = Paginator(QUESTIONS, 5)
-    page = paginator.page(page_num)
-    return render(
-        request, 'bender.html',
-        context={'questions': page.object_list, 'page_obj': page}
-    )
+def signup(request: HttpRequest):
+    context = {
+        'is_auth': False,
+        'top_users': models.Profile.objects.get_top_users(),
+        'top_tags': models.Tag.objects.get_top_tags(count=7)
+    }
+    return render(request, 'signup.html', context)
 
 
-def bender_auth(request):
-    if request.GET.get('page'):
-        page_num = int(request.GET.get('page'))
-    else:
-        page_num = 1
-    paginator = Paginator(QUESTIONS, 5)
-    page = paginator.page(page_num)
-    return render(
-        request, 'bender_auth.html',
-        context={'questions': page.object_list, 'page_obj': page}
-    )
+def ask(request: HttpRequest):
+    context = {
+        'is_auth': True,
+        'top_users': models.Profile.objects.get_top_users(),
+        'top_tags': models.Tag.objects.get_top_tags(count=7)
+    }
+    return render(request, 'ask.html', context)
 
 
-def black_jack(request):
-    hot_questions = copy.deepcopy(QUESTIONS)
-    hot_questions.reverse()
-    if request.GET.get('page'):
-        page_num = int(request.GET.get('page'))
-    else:
-        page_num = 1
-    paginator = Paginator(hot_questions, 5)
-    page = paginator.page(page_num)
-    return render(
-        request, 'black_jack.html',
-        context={'questions': page.object_list, 'page_obj': page}
-    )
+def tag(request: HttpRequest, tag_name: str):
+    page = utils.paginate(models.Question.objects.get_questions_by_tag(tag_name), request)
+    context = {
+        'tag_name': tag_name,
+        'questions': page['object_list'],
+        'page': page,
+        'is_auth': False,
+        'if_empty': {
+            'title': 'So far, there are no questions with such a tag.',
+            'description': 'But you can ask your question!'
+        },
+        'top_users': models.Profile.objects.get_top_users(),
+        'top_tags': models.Tag.objects.get_top_tags(count=7)
+    }
+    return render(request, 'tag.html', context)
 
 
-def black_jack_auth(request):
-    hot_questions = copy.deepcopy(QUESTIONS)
-    hot_questions.reverse()
-    if request.GET.get('page'):
-        page_num = int(request.GET.get('page'))
-    else:
-        page_num = 1
-    paginator = Paginator(hot_questions, 5)
-    page = paginator.page(page_num)
-    return render(
-        request, 'black_jack_auth.html',
-        context={'questions': page.object_list, 'page_obj': page}
-    )
+def settings(request: HttpRequest):
+    context = {
+        'is_auth': True,
+        'top_users': models.Profile.objects.get_top_users(),
+        'top_tags': models.Tag.objects.get_top_tags(count=7)
+    }
+    return render(request, 'settings.html', context)
 
 
-def user_settings(request):
-    return render(
-        request, 'user_settings.html',
-    )
+def profile(request: HttpRequest, user_id: int):
+    context = {
+        'is_auth': True,
+        'top_users': models.Profile.objects.get_top_users(),
+        'top_tags': models.Tag.objects.get_top_tags(count=7)
+    }
+    user = models.Profile.objects.get_user_by_id(user_id)
 
+    if not user:
+        return render(request, 'not_found.html', context, status=404)
 
-def user_login(request):
-    return render(
-        request, 'user_login.html',
-    )
+    page = utils.paginate(models.Question.objects.get_question_by_user(user_id), request)
+    context = {
+        'questions': page['object_list'],
+        'page': page,
+        'is_auth': False,
+        'if_empty': {
+            'title': 'So far, this user has not asked any questions yet.'
+        },
+        'profile': user,
+        'top_users': models.Profile.objects.get_top_users(),
+        'top_tags': models.Tag.objects.get_top_tags(count=7)
+    }
 
-
-def sign_up(request):
-    return render(
-        request, 'sign_up.html',
-    )
-
-
-def ask(request):
-    return render(
-        request, 'ask.html',
-    )
-
+    return render(request, 'profile.html', context)

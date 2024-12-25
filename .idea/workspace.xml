@@ -5,9 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5c27bf89-fb18-49f5-9548-7daaeb6189a9" name="Changes" comment="fixed errors again">
+      <change afterPath="$PROJECT_DIR$/members/management/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/management/commands/fill_database.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/Profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/answer_template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/empty_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/from_user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/likes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/paginator.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/question_template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/layouts/tags.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/not_found.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/templates/tag.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/members/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/bender_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/bender_auth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/members/templates/black_jack_auth.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/black_jack_auth.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AskPupkin/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AskPupkin/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AskPupkin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AskPupkin/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/members/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/members/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/ask.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/ask.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/bender.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/bender_auth.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/black_jack.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/black_jack_auth.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/hot.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/hot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/hot_auth.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/index_auth.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/layouts/answer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/layouts/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/layouts/base_auth.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/layouts/pagination.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/layouts/question.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/layouts/question_auth.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/one_question.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/one_question_answers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/one_question_answers_auth.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/one_question_auth.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/sign_up.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/sign_up.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/user_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/user_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/templates/user_settings.html" beforeDir="false" afterPath="$PROJECT_DIR$/members/templates/user_settings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/members/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/members/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/members/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/img/ava_batman.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +60,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
+        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -52,14 +96,29 @@
     &quot;Python.manage.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/luv.toxic/PycharmProjects/ASKME_ALEKSANDROV/members/templates/layouts&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/luv.toxic/PycharmProjects/ASKME_ALEKSANDROV&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\luv.toxic\PycharmProjects\ASKME_ALEKSANDROV\members\templates\layouts" />
       <recent name="C:\Users\luv.toxic\PycharmProjects\ASKME_ALEKSANDROV\members\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\luv.toxic\PycharmProjects\ASKME_ALEKSANDROV\members\management" />
     </key>
   </component>
   <component name="RunManager">
@@ -76,6 +135,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
       <option name="PARAMETERS" value="runserver" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -94,7 +154,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-ce3d9afa04ac-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.347" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23726.102" />
+        <option value="bundled-python-sdk-5e1850174b45-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23726.102" />
       </set>
     </attachedChunks>
   </component>
@@ -106,6 +167,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1728684504980</updated>
+      <workItem from="1731196109687" duration="1914000" />
+      <workItem from="1731274604661" duration="5690000" />
+      <workItem from="1731360659825" duration="7884000" />
+      <workItem from="1731390423631" duration="8417000" />
+      <workItem from="1731401848977" duration="368000" />
+      <workItem from="1731408575391" duration="4872000" />
+      <workItem from="1731438736673" duration="5768000" />
+      <workItem from="1731452928761" duration="2858000" />
+      <workItem from="1731483431027" duration="398000" />
+      <workItem from="1734093232061" duration="2343000" />
+      <workItem from="1734790100898" duration="7486000" />
+      <workItem from="1734952052136" duration="732000" />
+      <workItem from="1735134962433" duration="329000" />
     </task>
     <task id="LOCAL-00001" summary="init django, add bootstrap">
       <option name="closed" value="true" />
@@ -171,8 +245,30 @@
       <option name="project" value="LOCAL" />
       <updated>1730967764091</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed errors again">
+      <option name="closed" value="true" />
+      <created>1731007083990</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1731007083990</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init django, add bootstrap" />
